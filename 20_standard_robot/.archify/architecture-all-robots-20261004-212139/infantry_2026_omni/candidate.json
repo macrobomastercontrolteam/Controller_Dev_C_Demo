@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "INFANTRY_2026_OMNI · Firmware architecture",
+    "output": ".archify/architecture-all-robots-20261004-212139/infantry_2026_omni/infantry_2026_omni.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/macrobomastercontrolteam/Infantry_Common.git",
+      "revision": "d91be82e79a3d64802564e64a3184dfbeef54d5e",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "components": [
+    {
+      "id": "configuration",
+      "type": "backend",
+      "label": "Omni / 4010 profile",
+      "sublabel": "Compile-time selection; power ON",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Inc/global_inc.h",
+          "line": 177,
+          "end_line": 185
+        }
+      ]
+    },
+    {
+      "id": "commands",
+      "type": "frontend",
+      "label": "Remote + CV modules",
+      "sublabel": "remote_control.c / .h",
+      "pos": [
+        40,
+        230
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/remote_control.c",
+          "line": 92,
+          "end_line": 104
+        },
+        {
+          "path": "application/cv_usart_task.c",
+          "line": 171,
+          "end_line": 207
+        },
+        {
+          "path": "application/cv_usart_task.c",
+          "line": 250,
+          "end_line": 262
+        }
+      ],
+      "tag": "cv_usart_task.c / .h"
+    },
+    {
+      "id": "ins",
+      "type": "backend",
+      "label": "INS_task.c / .h",
+      "sublabel": "BMI088 sampling + AHRS attitude",
+      "pos": [
+        450,
+        40
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/INS_task.c",
+          "line": 171,
+          "end_line": 274
+        }
+      ]
+    },
+    {
+      "id": "gimbal",
+      "type": "backend",
+      "label": "gimbal_task.c / .h",
+      "sublabel": "gimbal_behaviour.c / .h",
+      "pos": [
+        450,
+        230
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/gimbal_task.c",
+          "line": 203,
+          "end_line": 322
+        },
+        {
+          "path": "application/gimbal_task.h",
+          "line": 33,
+          "end_line": 34
+        },
+        {
+          "path": "application/gimbal_task.c",
+          "line": 985,
+          "end_line": 1015
+        }
+      ],
+      "tag": "shoot.c / .h; 4 ms target"
+    },
+    {
+      "id": "gimbal-motors",
+      "type": "external",
+      "label": "Gimbal + launcher motors",
+      "sublabel": "DM4310 yaw / DM3507 pitch",
+      "pos": [
+        860,
+        230
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/CAN_receive.h",
+          "line": 59,
+          "end_line": 105
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1018,
+          "end_line": 1150
+        }
+      ]
+    },
+    {
+      "id": "referee",
+      "type": "messagebus",
+      "label": "referee_can_task.c / .h",
+      "sublabel": "referee.c / .h; CAN state",
+      "pos": [
+        40,
+        460
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Src/freertos.c",
+          "line": 186,
+          "end_line": 192
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1577,
+          "end_line": 1674
+        },
+        {
+          "path": "application/referee_usart_task.c",
+          "line": 50,
+          "end_line": 80
+        }
+      ]
+    },
+    {
+      "id": "chassis",
+      "type": "backend",
+      "label": "chassis_task.c / .h",
+      "sublabel": "chassis_behaviour.c / .h",
+      "pos": [
+        450,
+        460
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/chassis_task.c",
+          "line": 119,
+          "end_line": 152
+        },
+        {
+          "path": "application/chassis_task.c",
+          "line": 1175,
+          "end_line": 1220
+        },
+        {
+          "path": "application/chassis_task.h",
+          "line": 121,
+          "end_line": 123
+        }
+      ],
+      "tag": "5 ms; power ON"
+    },
+    {
+      "id": "drive",
+      "type": "external",
+      "label": "Four 4010 drive motors",
+      "sublabel": "CAN1 / KTech broadcast speed",
+      "pos": [
+        860,
+        460
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1256,
+          "end_line": 1284
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1350,
+          "end_line": 1394
+        }
+      ]
+    },
+    {
+      "id": "supercap",
+      "type": "external",
+      "label": "MACRM supercapacitor",
+      "sublabel": "CAN command; selected global variant",
+      "pos": [
+        450,
+        660
+      ],
+      "size": [
+        230,
+        76
+      ],
+      "sources": [
+        {
+          "path": "Inc/global_inc.h",
+          "line": 38,
+          "end_line": 50
+        },
+        {
+          "path": "application/chassis_task.c",
+          "line": 145,
+          "end_line": 150
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1702,
+          "end_line": 1795
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "cmd-gimbal",
+      "from": "commands",
+      "to": "gimbal",
+      "label": "aim / shoot modes"
+    },
+    {
+      "id": "cmd-chassis",
+      "from": "commands",
+      "to": "chassis",
+      "label": "motion commands"
+    },
+    {
+      "id": "ins-gimbal",
+      "from": "ins",
+      "to": "gimbal",
+      "label": "attitude"
+    },
+    {
+      "id": "gimbal-can",
+      "from": "gimbal",
+      "to": "gimbal-motors",
+      "label": "CAN1 + CAN2",
+      "variant": "emphasis"
+    },
+    {
+      "id": "ref-chassis",
+      "from": "referee",
+      "to": "chassis",
+      "label": "power / buffer"
+    },
+    {
+      "id": "chassis-can",
+      "from": "chassis",
+      "to": "drive",
+      "label": "speed broadcast",
+      "variant": "emphasis"
+    },
+    {
+      "id": "cap-command",
+      "from": "chassis",
+      "to": "supercap",
+      "label": "MACRM CAN"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Robot-specific behavior",
+      "items": [
+        "Hardware map: Inc/global_inc.h:177-185.",
+        "This profile is shown with ROBOT_TYPE set to INFANTRY_2026_OMNI; other global options retained.",
+        "Yaw DM4310; pitch DM3507; drive 4010; Omni kinematics.",
+        "Active chassis power control; Shift with buffer > 30 bypasses it (chassis_task.c:1195-1212).",
+        "CAN_PASS_REF_INFO=1: CAN RX parses referee state; referee_can_task sends UI information."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Control and feedback",
+      "items": [
+        "FreeRTOS: INS is realtime; gimbal high; chassis above normal (Src/freertos.c:164-177).",
+        "Gimbal + launcher target 4 ms; chassis target 5 ms. Blocking CAN delays can affect elapsed loop timing.",
+        "Motor CAN RX updates feedback; chassis also reads INS attitude and gimbal encoder state (chassis_task.c:177-180).",
+        "Gimbal waits for required motors at startup; relevant offline motors cause zero output (gimbal_task.c:203-322).",
+        "Referee heat and shooter-enable state affect launcher behavior (CAN_receive.c:1680-1683; shoot.c:689-715)."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Retained global configuration",
+      "items": [
+        "REMOTE_TYPE=VT13; CV_INTERFACE=1; DEBUG_CV=1; SUPERCAP_TYPE=MACRM; COMPETITION_TYPE=RMUL.",
+        "ENABLE_SHOOT_REDUNDANT_SWITCH=0 selects low normal friction speed; it is not a blanket launcher-disable switch.",
+        "Actuator output also depends on enable flags in CAN_receive.c:44-102.",
+        "Diagrams describe committed source paths, not measured robot behavior or verified builds of every profile."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Supporting firmware",
+      "items": [
+        "Detection monitors device health. Calibration reads/writes MCU flash (calibrate_task.c:423-477). RGB task is enabled.",
+        "VOFA is disabled in current globals. OLED, custom UI, USB, battery and servo task creation is commented out (Src/freertos.c:179-210)."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Source snapshot",
+      "items": [
+        "Branch Infantry_Common_Code_Opt; revision d91be82e79a3d64802564e64a3184dfbeef54d5e.",
+        "Biped excluded; existing local firmware edits preserved and excluded from source evidence."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Application files: control + transport",
+      "items": [
+        "application/gimbal_task.c + gimbal_task.h; gimbal_behaviour.c + gimbal_behaviour.h; shoot.c + shoot.h.",
+        "application/chassis_task.c + chassis_task.h; chassis_behaviour.c + chassis_behaviour.h.",
+        "application/chassis_power_control.c + chassis_power_control.h: active power allocation branch.",
+        "application/CAN_receive.c + CAN_receive.h: shared motor TX/RX, referee bridge and supercap commands.",
+        "application/remote_control.c + remote_control.h; cv_usart_task.c + cv_usart_task.h.",
+        "application/referee_can_task.c + referee_can_task.h; referee.c + referee.h; protocol/protocol.h."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Application files: support + UI",
+      "items": [
+        "application/INS_task.c + INS_task.h; detect_task.c + detect_task.h.",
+        "application/calibrate_task.c + calibrate_task.h; led_flow_task.c + led_flow_task.h.",
+        "application/custom_ui_task.c + custom_ui_task.h: ui_info state is used by active control code; drawing task is disabled.",
+        "Optional task pairs: vofa_task.c + vofa_task.h; oled_task.c + oled_task.h; usb_task.c + usb_task.h.",
+        "Optional task pairs: voltage_task.c + voltage_task.h; servo_task.c + servo_task.h; test_task.c + test_task.h.",
+        "These tasks are not created under the retained configuration; see Src/freertos.c:159-213.",
+        "graphic.c + graphic.h provides drawing helpers for custom_ui_task.c, whose drawing task is not created."
+      ]
+    }
+  ]
+}

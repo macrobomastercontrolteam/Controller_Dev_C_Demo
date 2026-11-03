@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\candidate.json",
+    "sha256": "1b206d19bcd55b9ee7f678fdb134da4000f2ea631f54b10fb5355f3d4f53ee40",
+    "bytes": 9079
+  },
+  "artifact": {
+    "path": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\sentry_2023_mecanum.html",
+    "sha256": "69860728fe855ec1f67775988098a8bd67930af4f14ecb9c36f9fb9a42d0df83",
+    "bytes": 767110
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\sentry_2023_mecanum.finalize.json",
+    "summaryReceipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\sentry_2023_mecanum.finalize-summary.json",
+    "browserCheckReceipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\sentry_2023_mecanum.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-05T01:20:18.564Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3081
+}

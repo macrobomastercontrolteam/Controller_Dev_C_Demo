@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\candidate.json",
+    "sha256": "2837f2f015e13ba0b16371e82956309b24ea04a9d3b4d9c361e2114c80e75beb",
+    "bytes": 8788
+  },
+  "artifact": {
+    "path": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\infantry_2024_mecanum_neo.html",
+    "sha256": "dec9ac9ac1f26ae5341b68f3cea7dcdd8e8b4df7531b8dfe06ef4bfe35aad87c",
+    "bytes": 766768
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\infantry_2024_mecanum_neo.finalize.json",
+    "summaryReceipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\infantry_2024_mecanum_neo.finalize-summary.json",
+    "browserCheckReceipt": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\infantry_2024_mecanum_neo.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-05T01:20:18.564Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3093
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "6fed771d-699c-4715-9cf0-f47743f5ba5b",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_swerve\\candidate.json",
+  "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_swerve\\infantry_2023_swerve.html",
+  "specification": {
+    "sha256": "b104f28fc6c2063d2cf0a3489cebbfcebd981db345be35cff9847a1742eb1f91",
+    "bytes": 11243
+  },
+  "artifact": {
+    "sha256": "29addbe982e37c3fdb0668afe1eb724297bc42d33fa6012514847140aa914b38",
+    "bytes": 772131
+  }
+}

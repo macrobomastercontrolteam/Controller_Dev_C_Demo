@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d88b8a3b-91c1-4a6f-a78e-57d8deeef328",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-robot-system-20261004-213000\\candidate.json",
+  "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-robot-system-20261004-213000\\robot-system.html",
+  "specification": {
+    "sha256": "43aa01cecab5fcc755eb58d6787f1a1471b43d4edf7fa64c216d4ff416f9c67d",
+    "bytes": 10149
+  },
+  "artifact": {
+    "sha256": "f25d81b8afbd2896580f2b7edec51f91beddd5f48c707927216a6cfedb98fe71",
+    "bytes": 769137
+  }
+}

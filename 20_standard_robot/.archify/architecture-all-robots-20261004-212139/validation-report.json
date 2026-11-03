@@ -1,0 +1,336 @@
+{
+  "diagram_type": "architecture",
+  "branch": "Infantry_Common_Code_Opt",
+  "revision": "d91be82e79a3d64802564e64a3184dfbeef54d5e",
+  "excluded": [
+    "INFANTRY_2024_BIPED"
+  ],
+  "visual_review": "not_requested",
+  "correction_rounds": 0,
+  "diagrams": [
+    {
+      "robot_type": "INFANTRY_2023_MECANUM",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_mecanum\\infantry_2023_mecanum.html",
+      "specification_sha256": "5724e820cb02b851daa46cdcdbc3829fa4ead084d07617543d0d7f2b2e4f64b0",
+      "artifact_sha256": "ceae61c5bfd808750b214a7154af2a9cb8480d7caab479ce14af094b1ba167b5",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2023_mecanum/file-labels-review/infantry_2023_mecanum.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2023_MECANUM",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_mecanum\\application-files.html",
+      "specification_sha256": "3de1fc38bf401b13abbc8626f221784dfdb3e635e01201d447389f1287fc64b1",
+      "artifact_sha256": "c72806673011905ccf8067eae97960d3541988ccf90138fd290905944e9d9356",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2023_mecanum/application-files.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2024_MECANUM",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum\\infantry_2024_mecanum.html",
+      "specification_sha256": "fbd0f79a2989ed4b770a48a5a417745a8a3a8d832035440e7e3f689bbc87110e",
+      "artifact_sha256": "1051e351003041e4da13cbbc1b12d333bc0a5c96644c0cf207cda37c03d19528",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2024_mecanum/file-labels-review/infantry_2024_mecanum.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2024_MECANUM",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum\\application-files.html",
+      "specification_sha256": "7e110c01db980ba7b71309a96adca848646817bc33645f5b4cf49b9a579db5e0",
+      "artifact_sha256": "3f59c2ae7d7b290cb0f31753a93f9ff1edf7864ac616b06c1c2e0caeb02d3e00",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2024_mecanum/application-files.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2023_SWERVE",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_swerve\\infantry_2023_swerve.html",
+      "specification_sha256": "b104f28fc6c2063d2cf0a3489cebbfcebd981db345be35cff9847a1742eb1f91",
+      "artifact_sha256": "29addbe982e37c3fdb0668afe1eb724297bc42d33fa6012514847140aa914b38",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2023_swerve/file-labels-review/infantry_2023_swerve.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2023_SWERVE",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2023_swerve\\application-files.html",
+      "specification_sha256": "de26dd1487162191280591cb6a900149cca755693a932e8458f38e2281f00c7c",
+      "artifact_sha256": "be81cdba0cc9e526f2fa1e6fc3ff48c1a832c4125dd96307c0b6766fd7896b6a",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2023_swerve/application-files.finalize.json"
+    },
+    {
+      "robot_type": "SENTRY_2023_MECANUM",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\sentry_2023_mecanum.html",
+      "specification_sha256": "72486a1f5fd5004b7be17c9f6af0d0c44445d9ff8d61e8d6391c82fb4b4a1087",
+      "artifact_sha256": "cdd3fb85f606c4752a36ca64fbc0d50a96aae4006944aa3c3c76cc11b907fd92",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "sentry_2023_mecanum/file-labels-review/sentry_2023_mecanum.finalize.json"
+    },
+    {
+      "robot_type": "SENTRY_2023_MECANUM",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2023_mecanum\\application-files.html",
+      "specification_sha256": "af59a4592836676da9bcf9ad1ff6579089e9ffc7f90dda61eb4c031ee37e55ea",
+      "artifact_sha256": "85646c3e7f371cc93a0205f7a6ce21d14804528e7566128cdc878d3f9c64a2f4",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "sentry_2023_mecanum/application-files.finalize.json"
+    },
+    {
+      "robot_type": "HERO_2025_MECANUM",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\hero_2025_mecanum\\hero_2025_mecanum.html",
+      "specification_sha256": "29e82c9988f73b8988a247f007ec0c5bc2efc86af08e5a8108354702daff7ad9",
+      "artifact_sha256": "f0145d4c6de44b73ccf1137a2f02207f3ede61ccd75d8bd91f381ffbf1c8cc6e",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "hero_2025_mecanum/file-labels-review/hero_2025_mecanum.finalize.json"
+    },
+    {
+      "robot_type": "HERO_2025_MECANUM",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\hero_2025_mecanum\\application-files.html",
+      "specification_sha256": "70541c440bec554301920c73cface15ce0ec3790e76e1705fee5d010d4aded48",
+      "artifact_sha256": "7b4d2b2a87045dc33e49acd31512dfc292e805e0424b5eee208331a038dca200",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "hero_2025_mecanum/application-files.finalize.json"
+    },
+    {
+      "robot_type": "SENTRY_2026_OMNI",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2026_omni\\sentry_2026_omni.html",
+      "specification_sha256": "dc6d081e14cee4a9082d1e7ce9dc46f634501456591fd99a7fe5e7b3f2d3e7f1",
+      "artifact_sha256": "546105c5d88763e65426d86b81aadd568cb779b83e09558d9f55e83018ed1759",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "sentry_2026_omni/file-labels-review/sentry_2026_omni.finalize.json"
+    },
+    {
+      "robot_type": "SENTRY_2026_OMNI",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\sentry_2026_omni\\application-files.html",
+      "specification_sha256": "ad1876dd860cdaa03154b91f123ec871166e83704e661a1aac612956a583745f",
+      "artifact_sha256": "4bc535c93f6c4d973e19c180fcae34c1b6cec7817ee65bececa593bbf0e72b36",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "sentry_2026_omni/application-files.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2026_MECANUM",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_mecanum\\infantry_2026_mecanum.html",
+      "specification_sha256": "1fe6dd15a3b2db489e3582d2d49c39ed2b2cceba472e76327add70333968df2e",
+      "artifact_sha256": "0bb9997a9ddbaddc3d8cedf88f8ed126fdeb34cce3833cb9a42be24c0583bd65",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2026_mecanum/file-labels-review/infantry_2026_mecanum.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2026_MECANUM",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_mecanum\\application-files.html",
+      "specification_sha256": "647ff6837e859f3a1840da4a3170a98c828f5757cebc363e6d5655f4fb0b62a7",
+      "artifact_sha256": "daa30e34fb3dccbb2ece1cc4d25a8a945eefc452a393fc9bb6d295a5dd232dae",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2026_mecanum/application-files.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2024_MECANUM_NEO",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\infantry_2024_mecanum_neo.html",
+      "specification_sha256": "89427320f1d08cf8ea56830b67614afacce476d2298913834ff1112bdd3001bf",
+      "artifact_sha256": "ce4f461af8c377c22d7789d7afb3f25516b4088994fee34bc474939963eb4147",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2024_mecanum_neo/file-labels-review/infantry_2024_mecanum_neo.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2024_MECANUM_NEO",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2024_mecanum_neo\\application-files.html",
+      "specification_sha256": "d3c1ad7acfd16e7ced13d76759633704ff2a5fbbb753c66db330a6ea02a06c4a",
+      "artifact_sha256": "228e62ed58c75a1cf863e35a4630c56219c2bca214153e4eb90231b571e6b880",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2024_mecanum_neo/application-files.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2026_OMNI",
+      "view": "system",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_omni\\infantry_2026_omni.html",
+      "specification_sha256": "155ae00b3a209fe2cb95eee37476a58d4e65c222a0eb5169473822fa36eb1af9",
+      "artifact_sha256": "b35be2d4c5ce77ebdecd6fe72a7d5a1e8bd641ca14db2f755531d73f09800a8c",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2026_omni/file-labels-review/infantry_2026_omni.finalize.json"
+    },
+    {
+      "robot_type": "INFANTRY_2026_OMNI",
+      "view": "application",
+      "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_omni\\application-files.html",
+      "specification_sha256": "97b3f261d1d4ebc8f6a5065ed9156e62dd93cfdf139b3740973088cf678106ec",
+      "artifact_sha256": "0ba1acbce4de0b2ef9fbc8e4867b13aff958705e8d94911be8bb4ca16df14bdd",
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      },
+      "browser_evidence": "passed",
+      "visual_review": "not_requested",
+      "receipt": "infantry_2026_omni/application-files.finalize.json"
+    }
+  ]
+}

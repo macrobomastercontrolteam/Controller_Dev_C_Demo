@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SENTRY_2026_OMNI · Application files and selected dependencies",
+    "output": ".archify/architecture-all-robots-20261004-212139/sentry_2026_omni/application-files.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/macrobomastercontrolteam/Infantry_Common.git",
+      "revision": "d91be82e79a3d64802564e64a3184dfbeef54d5e",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "components": [
+    {
+      "id": "remote",
+      "type": "frontend",
+      "label": "remote_control.c",
+      "sublabel": "remote_control.h",
+      "tag": "Remote state / UART RX",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/remote_control.c",
+          "line": 92,
+          "end_line": 104
+        },
+        {
+          "path": "application/remote_control.h",
+          "line": 124,
+          "end_line": 130
+        }
+      ]
+    },
+    {
+      "id": "ins",
+      "type": "backend",
+      "label": "INS_task.c",
+      "sublabel": "INS_task.h",
+      "tag": "IMU sampling / attitude",
+      "pos": [
+        400,
+        40
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/INS_task.c",
+          "line": 171,
+          "end_line": 274
+        },
+        {
+          "path": "application/INS_task.h",
+          "line": 78,
+          "end_line": 118
+        },
+        {
+          "path": "application/INS_task.c",
+          "line": 608,
+          "end_line": 627
+        }
+      ]
+    },
+    {
+      "id": "detect",
+      "type": "backend",
+      "label": "detect_task.c",
+      "sublabel": "detect_task.h",
+      "tag": "Health flags / offline checks",
+      "pos": [
+        760,
+        40
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/detect_task.c",
+          "line": 76,
+          "end_line": 195
+        },
+        {
+          "path": "application/detect_task.h",
+          "line": 120,
+          "end_line": 143
+        }
+      ]
+    },
+    {
+      "id": "gimbal-behaviour",
+      "type": "backend",
+      "label": "gimbal_behaviour.c",
+      "sublabel": "gimbal_behaviour.h",
+      "tag": "Mode / angle setpoints",
+      "pos": [
+        40,
+        240
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/gimbal_behaviour.c",
+          "line": 406,
+          "end_line": 485
+        },
+        {
+          "path": "application/gimbal_behaviour.h",
+          "line": 76,
+          "end_line": 107
+        }
+      ]
+    },
+    {
+      "id": "gimbal",
+      "type": "backend",
+      "label": "gimbal_task.c",
+      "sublabel": "gimbal_task.h",
+      "tag": "4 ms target / motor safety",
+      "pos": [
+        400,
+        240
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/gimbal_task.c",
+          "line": 203,
+          "end_line": 322
+        },
+        {
+          "path": "application/gimbal_task.h",
+          "line": 33,
+          "end_line": 34
+        },
+        {
+          "path": "application/gimbal_task.c",
+          "line": 738,
+          "end_line": 748
+        }
+      ]
+    },
+    {
+      "id": "shoot",
+      "type": "backend",
+      "label": "shoot.c",
+      "sublabel": "shoot.h",
+      "tag": "Launcher state / motor PID",
+      "pos": [
+        760,
+        240
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/shoot.c",
+          "line": 630,
+          "end_line": 715
+        },
+        {
+          "path": "application/shoot.h",
+          "line": 27,
+          "end_line": 52
+        }
+      ]
+    },
+    {
+      "id": "cv",
+      "type": "frontend",
+      "label": "cv_usart_task.c",
+      "sublabel": "cv_usart_task.h",
+      "tag": "CV UART / sentry timeouts",
+      "pos": [
+        40,
+        440
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/cv_usart_task.c",
+          "line": 171,
+          "end_line": 262
+        },
+        {
+          "path": "application/cv_usart_task.h",
+          "line": 1,
+          "end_line": 35
+        }
+      ]
+    },
+    {
+      "id": "can",
+      "type": "messagebus",
+      "label": "CAN_receive.c",
+      "sublabel": "CAN_receive.h",
+      "tag": "CAN motor TX / RX + bridge",
+      "pos": [
+        400,
+        440
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1018,
+          "end_line": 1150
+        },
+        {
+          "path": "application/CAN_receive.h",
+          "line": 28,
+          "end_line": 84
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1577,
+          "end_line": 1603
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "type": "backend",
+      "label": "custom_ui_task.c",
+      "sublabel": "custom_ui_task.h",
+      "tag": "ui_info active; drawing off",
+      "pos": [
+        760,
+        440
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/custom_ui_task.c",
+          "line": 19,
+          "end_line": 34
+        },
+        {
+          "path": "application/custom_ui_task.h",
+          "line": 24,
+          "end_line": 68
+        }
+      ]
+    },
+    {
+      "id": "chassis-behaviour",
+      "type": "backend",
+      "label": "chassis_behaviour.c",
+      "sublabel": "chassis_behaviour.h",
+      "tag": "Motion mode / CV setpoints",
+      "pos": [
+        40,
+        640
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/chassis_behaviour.c",
+          "line": 96,
+          "end_line": 146
+        },
+        {
+          "path": "application/chassis_behaviour.h",
+          "line": 19,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "id": "chassis",
+      "type": "backend",
+      "label": "chassis_task.c",
+      "sublabel": "chassis_task.h",
+      "tag": "5 ms target / Omni PID",
+      "pos": [
+        400,
+        640
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/chassis_task.c",
+          "line": 119,
+          "end_line": 180
+        },
+        {
+          "path": "application/chassis_task.h",
+          "line": 121,
+          "end_line": 123
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "type": "backend",
+      "label": "chassis_power_control.c",
+      "sublabel": "chassis_power_control.h",
+      "tag": "Power branch ON / Shift bypass",
+      "pos": [
+        760,
+        640
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/chassis_power_control.c",
+          "line": 550,
+          "end_line": 585
+        },
+        {
+          "path": "application/chassis_power_control.h",
+          "line": 288,
+          "end_line": 294
+        }
+      ]
+    },
+    {
+      "id": "calibrate",
+      "type": "backend",
+      "label": "calibrate_task.c",
+      "sublabel": "calibrate_task.h",
+      "tag": "Flash / gyro + gimbal calibration",
+      "pos": [
+        40,
+        840
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/calibrate_task.c",
+          "line": 423,
+          "end_line": 477
+        },
+        {
+          "path": "application/calibrate_task.h",
+          "line": 182,
+          "end_line": 202
+        }
+      ]
+    },
+    {
+      "id": "referee",
+      "type": "backend",
+      "label": "referee.c",
+      "sublabel": "referee.h",
+      "tag": "Match state / query API",
+      "pos": [
+        400,
+        840
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/referee.c",
+          "line": 280,
+          "end_line": 369
+        },
+        {
+          "path": "application/referee.h",
+          "line": 366,
+          "end_line": 385
+        }
+      ]
+    },
+    {
+      "id": "ref-task",
+      "type": "backend",
+      "label": "referee_can_task.c",
+      "sublabel": "referee_can_task.h",
+      "tag": "CAN UI TX task; 10 ms",
+      "pos": [
+        760,
+        840
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/referee_can_task.c",
+          "line": 26,
+          "end_line": 43
+        },
+        {
+          "path": "application/referee_can_task.h",
+          "line": 1,
+          "end_line": 11
+        },
+        {
+          "path": "application/CAN_receive.c",
+          "line": 1577,
+          "end_line": 1674
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "type": "backend",
+      "label": "led_flow_task.c",
+      "sublabel": "led_flow_task.h",
+      "tag": "RGB task enabled",
+      "pos": [
+        40,
+        1040
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/led_flow_task.c",
+          "line": 34,
+          "end_line": 84
+        },
+        {
+          "path": "application/led_flow_task.h",
+          "line": 20,
+          "end_line": 28
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "type": "backend",
+      "label": "protocol/protocol.h",
+      "sublabel": "Referee command IDs / packet structs",
+      "pos": [
+        400,
+        1040
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/protocol/protocol.h",
+          "line": 1,
+          "end_line": 75
+        },
+        {
+          "path": "application/referee.c",
+          "line": 1,
+          "end_line": 11
+        }
+      ]
+    },
+    {
+      "id": "graphic",
+      "type": "backend",
+      "label": "graphic.c",
+      "sublabel": "graphic.h",
+      "tag": "UI drawing helpers; task off",
+      "pos": [
+        760,
+        1040
+      ],
+      "size": [
+        230,
+        96
+      ],
+      "sources": [
+        {
+          "path": "application/graphic.c",
+          "line": 459,
+          "end_line": 499
+        },
+        {
+          "path": "application/graphic.h",
+          "line": 1,
+          "end_line": 28
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "gimbal-modes",
+      "from": "gimbal",
+      "to": "gimbal-behaviour",
+      "label": "mode / setpoints"
+    },
+    {
+      "id": "read-rc",
+      "from": "gimbal-behaviour",
+      "to": "remote",
+      "label": "reads RC state"
+    },
+    {
+      "id": "read-ins",
+      "from": "gimbal",
+      "to": "ins",
+      "label": "reads attitude"
+    },
+    {
+      "id": "ins-health",
+      "from": "ins",
+      "to": "detect",
+      "label": "detect_hook"
+    },
+    {
+      "id": "shoot-loop",
+      "from": "gimbal",
+      "to": "shoot",
+      "label": "shoot_control_loop"
+    },
+    {
+      "id": "gimbal-can",
+      "from": "gimbal",
+      "to": "can",
+      "label": "motor TX",
+      "variant": "emphasis"
+    },
+    {
+      "id": "chassis-can",
+      "from": "chassis",
+      "to": "can",
+      "label": "drive + cap TX",
+      "variant": "emphasis"
+    },
+    {
+      "id": "chassis-modes",
+      "from": "chassis",
+      "to": "chassis-behaviour",
+      "label": "mode / setpoints"
+    },
+    {
+      "id": "chassis-cv",
+      "from": "chassis-behaviour",
+      "to": "cv",
+      "label": "reads CV motion"
+    },
+    {
+      "id": "can-ui",
+      "from": "can",
+      "to": "ui",
+      "label": "reads ui_info",
+      "variant": "default"
+    },
+    {
+      "id": "protocol-include",
+      "from": "referee",
+      "to": "protocol",
+      "label": "includes definitions"
+    },
+    {
+      "id": "chassis-power",
+      "from": "chassis",
+      "to": "power",
+      "label": "unless Shift bypass"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Reading this application map",
+      "items": [
+        "Every box names its application .c implementation and matching .h interface; click a box for source evidence.",
+        "Arrows show selected caller-to-provider dependencies. State reads point toward the provider, not toward the data consumer.",
+        "Both hardware and control-loop relationships remain in the companion system diagram; this map exposes application modules.",
+        "All source links use branch revision d91be82e79a3d64802564e64a3184dfbeef54d5e."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Robot configuration",
+      "items": [
+        "Hardware map: Inc/global_inc.h:147-155.",
+        "This profile is shown with ROBOT_TYPE set to SENTRY_2026_OMNI; other global options retained.",
+        "Yaw DM4310; pitch DM3507; drive 4010; Omni kinematics.",
+        "Active chassis power control; Shift with buffer > 30 bypasses it (chassis_task.c:1195-1212).",
+        "CAN_PASS_REF_INFO=1: CAN RX parses referee state; referee_can_task sends UI information.",
+        "CV auto aim enabled at startup; shoot, spin and align modes have timeouts (cv_usart_task.c:177-207)."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Additional shared relationships",
+      "items": [
+        "gimbal_task.c:748,1026 calls gimbal_behaviour APIs; :642 reads INS; :992-1013 reads CvCmdHandler aim state.",
+        "chassis_task.c:177-180 reads remote, INS and gimbal feedback; :802 calls chassis_behaviour_control_set.",
+        "shoot.c:689-715 uses referee state and CV modes. referee.c includes protocol/protocol.h and CAN_receive.h.",
+        "referee_can_task.c:37 calls CAN_receive.c send_ui_info; CAN_receive.c:1577-1674 handles UI TX and referee RX.",
+        "calibrate_task.c:532,574 applies gyro and gimbal calibration through their APIs and persists data in MCU flash.",
+        "CAN_receive.c, INS_task.c and CV/remote receivers call detect_hook; control modules consume health flags.",
+        "custom_ui_task.c:34 owns ui_info; gimbal and chassis modules update it; CAN reads it for bridge UI TX when enabled."
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Optional application files",
+      "items": [
+        "Optional task pairs: vofa_task.c + vofa_task.h; oled_task.c + oled_task.h; usb_task.c + usb_task.h.",
+        "Optional task pairs: voltage_task.c + voltage_task.h; servo_task.c + servo_task.h; test_task.c + test_task.h.",
+        "These tasks are not created under the retained configuration; see Src/freertos.c:159-213.",
+        "graphic.c + graphic.h provides drawing helpers for custom_ui_task.c, whose drawing task is not created."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Scope",
+      "items": [
+        "Nine non-biped configurations; all .c/.h labels are files in application/, except the nested protocol/protocol.h.",
+        "CHASSIS_POWER_CONTROL, CAN_PASS_REF_INFO and special actuator paths vary by robot; global VT13/CV/MACRM settings are retained.",
+        "Firmware edits are preserved and excluded from this committed snapshot; this is a source map, not a per-profile build verification."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "77755f5c-4cd3-4a7b-90b2-50ad61fc25dc",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_mecanum\\candidate.json",
+  "output": "C:\\RoboMaster\\Workspace_Infantry_Reference\\Infantry_Common\\.archify\\architecture-all-robots-20261004-212139\\infantry_2026_mecanum\\infantry_2026_mecanum.html",
+  "specification": {
+    "sha256": "1fe6dd15a3b2db489e3582d2d49c39ed2b2cceba472e76327add70333968df2e",
+    "bytes": 11923
+  },
+  "artifact": {
+    "sha256": "0bb9997a9ddbaddc3d8cedf88f8ed126fdeb34cce3833cb9a42be24c0583bd65",
+    "bytes": 775056
+  }
+}

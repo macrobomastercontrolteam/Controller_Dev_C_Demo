@@ -1,0 +1,98 @@
+[
+  {
+    "type": "INFANTRY_2023_MECANUM",
+    "line": 87,
+    "wheel": "Mecanum",
+    "motor": "3508",
+    "yaw": "GM6020",
+    "pitch": "GM6020",
+    "pwr": false,
+    "can": false
+  },
+  {
+    "type": "INFANTRY_2024_MECANUM",
+    "line": 97,
+    "wheel": "Mecanum",
+    "motor": "3508",
+    "yaw": "DM4310",
+    "pitch": "GM6020",
+    "pwr": true,
+    "can": true
+  },
+  {
+    "type": "INFANTRY_2023_SWERVE",
+    "line": 107,
+    "wheel": "Swerve",
+    "motor": "3508",
+    "yaw": "GM6020",
+    "pitch": "GM6020",
+    "pwr": false,
+    "can": false,
+    "special": "swerve"
+  },
+  {
+    "type": "SENTRY_2023_MECANUM",
+    "line": 127,
+    "wheel": "Mecanum",
+    "motor": "3508",
+    "yaw": "GM6020",
+    "pitch": "GM6020",
+    "pwr": false,
+    "can": false,
+    "sentry": true
+  },
+  {
+    "type": "HERO_2025_MECANUM",
+    "line": 137,
+    "wheel": "Mecanum",
+    "motor": "3508",
+    "yaw": "DM4310",
+    "pitch": "DM4340",
+    "pwr": true,
+    "can": true,
+    "special": "hero"
+  },
+  {
+    "type": "SENTRY_2026_OMNI",
+    "line": 147,
+    "wheel": "Omni",
+    "motor": "4010",
+    "yaw": "DM4310",
+    "pitch": "DM3507",
+    "pwr": true,
+    "can": true,
+    "sentry": true
+  },
+  {
+    "type": "INFANTRY_2026_MECANUM",
+    "line": 157,
+    "wheel": "Mecanum",
+    "motor": "3508",
+    "yaw": "DM4310",
+    "pitch": "DM4310",
+    "pwr": false,
+    "can": true,
+    "special": "hip"
+  },
+  {
+    "type": "INFANTRY_2024_MECANUM_NEO",
+    "line": 167,
+    "wheel": "Mecanum",
+    "motor": "4010",
+    "yaw": "DM4310",
+    "pitch": "DM3507",
+    "pwr": true,
+    "can": true,
+    "active": true
+  },
+  {
+    "type": "INFANTRY_2026_OMNI",
+    "line": 177,
+    "wheel": "Omni",
+    "motor": "4010",
+    "yaw": "DM4310",
+    "pitch": "DM3507",
+    "pwr": true,
+    "can": true
+  }
+]
