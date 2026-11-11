@@ -60,6 +60,8 @@ void SystemClock_Config(void);
 #define RGB_FLOW_COLOR_CHANGE_TIME  500
 #define RGB_FLOW_COLOR_LENGHT   3
 uint32_t RGB_flow_color[RGB_FLOW_COLOR_LENGHT + 1] = {0xFF0000FF, 0xFF00FF00, 0xFFFF0000, 0xFF0000FF};
+volatile uint16_t dbg_transition = 0;
+volatile uint16_t dbg_step = 0;
 /* USER CODE END 0 */
 
 /**
@@ -118,6 +120,7 @@ int main(void)
         uint32_t aRGB;
         for(i = 0; i < RGB_FLOW_COLOR_LENGHT; i++)
         {
+            dbg_transition = i;
             alpha = (RGB_flow_color[i] & 0xFF000000) >> 24;
             red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
             green = ((RGB_flow_color[i] & 0x0000FF00) >> 8);
@@ -134,6 +137,7 @@ int main(void)
             delta_blue /= RGB_FLOW_COLOR_CHANGE_TIME;
             for(j = 0; j < RGB_FLOW_COLOR_CHANGE_TIME; j++)
             {
+                dbg_step = j;
                 alpha += delta_alpha;
                 red += delta_red;
                 green += delta_green;

@@ -58,6 +58,9 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+volatile uint16_t dbg_servo_pulse_us = 0;
+volatile uint8_t dbg_servo_phase = 0;
+
 /* USER CODE END 0 */
 
 /**
@@ -112,6 +115,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+        //Commanded pulse width, not measured servo position.
+        dbg_servo_phase = 0;
+        dbg_servo_pulse_us = 500;
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, 500);
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, 500);
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 500);
@@ -120,6 +126,8 @@ int main(void)
         __HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_2, 500);
         __HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_3, 500);
         HAL_Delay(1000);
+        dbg_servo_phase = 1;
+        dbg_servo_pulse_us = 2000;
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, 2000);
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, 2000);
         __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, 2000);

@@ -58,6 +58,8 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+volatile uint8_t dbg_alpha = 32;
+
 /* USER CODE END 0 */
 
 /**
@@ -109,7 +111,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        aRGB_led_show(0x7F123456);
+        aRGB_led_show(((uint32_t)dbg_alpha << 24) | 0x00123456);
+        HAL_Delay(500);
+        dbg_alpha += 32;
+        if(dbg_alpha == 0)
+        {
+            dbg_alpha = 32;
+        }
   }
   /* USER CODE END 3 */
 }

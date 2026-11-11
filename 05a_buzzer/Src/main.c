@@ -63,8 +63,13 @@ void SystemClock_Config(void);
 #define MAX_BUZZER_PWM      20000
 #define MIN_BUZZER_PWM      10000
 
+#define BUZZER_TIMER_CLOCK_HZ  84000000.0f
+#define BUZZER_TIMER_PERIOD    21000.0f
+
 uint16_t psc = 0;
 uint16_t pwm = MIN_BUZZER_PWM;
+volatile float dbg_frequency_hz = 4000.0f;
+volatile float dbg_duty_percent = 47.619f;
  
 /* USER CODE END 0 */
 
@@ -126,6 +131,8 @@ int main(void)
         {
             psc = 0;
         }
+        dbg_frequency_hz = BUZZER_TIMER_CLOCK_HZ / (((float)psc + 1.0f) * BUZZER_TIMER_PERIOD);
+        dbg_duty_percent = ((float)pwm * 100.0f) / BUZZER_TIMER_PERIOD;
         buzzer_on(psc, pwm);
         HAL_Delay(250);
 

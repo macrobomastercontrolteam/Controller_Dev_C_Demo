@@ -58,8 +58,12 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 //backgroud program
 //Background program.
-uint8_t exit_flag = 0;
-uint8_t rising_falling_flag;
+volatile uint8_t exit_flag = 0;
+volatile uint8_t rising_falling_flag;
+volatile uint32_t dbg_irq_count = 0;
+volatile uint32_t dbg_press_count = 0;
+volatile uint8_t dbg_button_pressed = 0;
+volatile uint8_t dbg_led_state = 0;
 
 /**
   * @brief          exit callback function
@@ -75,6 +79,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     if(GPIO_Pin == KEY_Pin)
     {
+        dbg_irq_count++;
         if(exit_flag == 0)
         {
             exit_flag = 1;
@@ -119,6 +124,8 @@ int main(void)
     HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET);
+    dbg_button_pressed = (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_RESET);
+    dbg_led_state = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -143,6 +150,9 @@ int main(void)
                 if(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_RESET)
                 {
                     HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET);
+                    dbg_button_pressed = 1;
+                    dbg_led_state = 1;
+                    dbg_press_count++;
                     exit_flag = 0;
                 }
                 else
@@ -158,6 +168,8 @@ int main(void)
                 if(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_SET)
                 {
                     HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET);
+                    dbg_button_pressed = 0;
+                    dbg_led_state = 0;
                     exit_flag = 0;
                 }
                 else
